@@ -4,6 +4,7 @@ MAHA is an academic software project developed in Python whose goal is to suppor
 
 The system integrates algorithmic logic, data structures, a basic neural network, and a graphical user interface, combining concepts from software engineering, data analysis, and educational systems design.
 
+
 🎯 Project Objective
 
 Detect academic difficulties by subject and topic
@@ -21,18 +22,26 @@ Provide all functionality through a user-friendly graphical interface
 
 MAHA is structured into clearly separated modules to ensure maintainability and scalability:
 
-MAHA FINALIZED/
-│
-├── main.py              # Core system logic and execution flow
-├── INTERFAZ.py          # Graphical User Interface (GUI)
-├── modelo_nn.py         # Neural network for performance evaluation
-├── GRAFO_LOGICA.py      # Prerequisite and dependency logic (graph-based)
-├── CONTENIDO.py         # Academic content and question bank
-├── PERFILES.py          # Student profile management
-├── UTILIDADES.py        # Utility and helper functions
-├── TEMA.py              # Academic topic model
-├── PREREQUISITOS.json   # External definition of topic prerequisites
-└── .venv/               # Virtual environment (not required in repo)
+├──main.py # Core system logic and execution flow
+
+├── INTERFAZ.py # Graphical User Interface (GUI)
+
+├── modelo_nn.py # Neural network for performance evaluation
+
+├── GRAFO_LOGICA.py # Prerequisite and dependency logic (graph-based)
+
+├── CONTENIDO.py # Academic content and question bank
+
+├── PERFILES.py # Student profile management
+
+├── UTILIDADES.py # Utility and helper functions
+
+├── TEMA.py # Academic topic model
+
+├── PREREQUISITOS.json # External definition of topic prerequisites
+
+└── .venv/ # Virtual environment (not required in repo)
+
 
 
 ⚙️ Execution Flow
@@ -58,111 +67,43 @@ Student progress is saved and can be resumed in future sessions
 main.py
 
 Main entry point of the system.
-Responsible for:
-
-Loading and managing student profiles
-
-Coordinating evaluations
-
-Generating adaptive learning paths
-
-Integrating GUI, neural network, and content logic
-
-Defines key parameters such as the passing threshold and admin mode.
+Coordinates profile management, evaluation logic, learning path generation, and integration between all modules.
 
 INTERFAZ.py
 
-Implements the graphical user interface (GUI).
-Allows:
-
-User interaction without terminal usage
-
-Profile selection and creation
-
-Visualization of results and learning paths
-
-The interface is decoupled from core logic to simplify maintenance.
+Implements the graphical user interface (GUI), allowing the system to be used without relying on the terminal.
+Displays profiles, evaluation results, and generated learning paths.
 
 modelo_nn.py
 
-Contains a basic neural network used to:
-
-Analyze student performance patterns
-
-Support reinforcement or advancement decisions
-
-Introduce machine learning concepts in an academic context
-
-Designed to be lightweight and educational rather than production-heavy.
+Contains a basic neural network used to analyze student performance patterns and support decisions related to reinforcement or advancement.
 
 GRAFO_LOGICA.py
 
-Models topic relationships using graph-based logic:
-
-Defines dependencies between academic topics
-
-Prevents progression without mastering prerequisites
-
-Ensures pedagogical coherence in generated learning paths
+Implements graph-based logic to model topic dependencies and enforce prerequisite completion before allowing progression.
 
 CONTENIDO.py
 
-Acts as the central knowledge repository, containing:
-
-Theoretical content per subject
-
-Question banks
-
-Suggested learning paths
-
-Topic classification and metadata
-
-This design allows easy extension to additional subjects.
+Acts as the central repository of academic content, including theoretical material, question banks, topic metadata, and suggested learning paths.
 
 PERFILES.py
 
-Handles student profile management:
-
-Creation and loading of profiles
-
-Persistent storage of progress
-
-Performance history tracking
-
-Profiles enable continuity across multiple sessions.
+Handles creation, loading, and persistent storage of student profiles and their performance history.
 
 TEMA.py
 
-Defines the Tema class, representing:
-
-An academic topic
-
-Its content
-
-Mastery level
-
-Current state within the learning path
-
-It is the fundamental unit of the system.
+Defines the Tema class, representing an academic topic, its content, mastery level, and current state within the learning path.
 
 UTILIDADES.py
 
-Provides auxiliary functions such as:
-
-Input normalization
-
-Text processing
-
-General-purpose helpers used across modules
-
-Keeps core modules clean and readable.
+Provides helper functions for input normalization, text processing, and shared utilities used across the system.
 
 
 📊 Evaluation Criteria
 
-The system uses a passing threshold (default: 0.8).
+The system uses a default passing threshold of 0.8
 
-If a student does not meet the threshold:
+If the threshold is not met:
 
 The topic is reinforced
 
@@ -170,7 +111,7 @@ The learning path is adjusted
 
 Dependent topics are temporarily locked
 
-Prerequisites are dynamically loaded from PREREQUISITOS.json.
+Topic prerequisites are dynamically loaded from PREREQUISITOS.json
 
 
 🚀 Technologies Used
@@ -194,22 +135,13 @@ Object-oriented design
 
 📌 Academic Context
 
-MAHA was developed as a university-level academic project, integrating knowledge from:
+MAHA was developed as a university-level academic project, integrating knowledge from programming, data structures, introductory artificial intelligence, software engineering, and systems design.
 
-Programming fundamentals
-
-Data structures
-
-Introductory artificial intelligence
-
-Software engineering
-
-Systems design
-
-The project serves both as a functional tool and a technical demonstration.
+The project serves both as a functional educational tool and a technical demonstration of applied engineering concepts.
 
 
 ✨ Author
+
 Marlon Molina
 Cybernetics Engineering in Computer Systems
 Universidad La Salle México
