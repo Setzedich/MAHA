@@ -1,0 +1,33 @@
+{
+    "nombre": "Martín",
+    "carrera": "sistemas",
+    "progreso": {
+        "ARITMETICA": "dominado_por_admin",
+        "ALGEBRA BASICA": "dominado_por_admin",
+        "GEOMETRIA": "dominado_por_admin",
+        "TRIGONOMETRIA": "dominado_por_admin",
+        "GEOMETRIA ANALITICA": "dominado_por_admin",
+        "PRECALCULO": "dominado_por_admin",
+        "CALCULO DIFERENCIAL": "dominado_por_admin",
+        "VECTORES Y GEOMETRIA": "dominado_por_admin",
+        "CALCULO INTEGRAL": "dominado_por_admin",
+        "ALGEBRA LINEAL": "dominado_por_admin",
+        "CALCULO VECTORIAL": "dominado_por_admin",
+        "ECUACIONES DIFERENCIALES": "dominado_por_admin",
+        "FIS-01": "dominado_por_admin",
+        "FIS-02": "dominado_por_admin",
+        "FIS-03": "dominado_por_admin",
+        "FIS-04": "dominado_por_admin",
+        "FIS-05": "dominado_por_admin",
+        "QUIM-01": "dominado_por_admin",
+        "QUIM-02": "dominado_por_admin",
+        "QUIM-03": "dominado_por_admin",
+        "QUIM-04": "dominado_por_admin",
+        "QUIM-05": "dominado_por_admin",
+        "PROG-01": "dominado_por_admin",
+        "PROG-02": "dominado_por_admin",
+        "PROG-03": "dominado_por_admin",
+        "PROG-04": "dominado_por_admin",
+        "PROG-05": "dominado_por_admin"
+    }
+}

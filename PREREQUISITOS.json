@@ -1,0 +1,83 @@
+{
+    "ARITMETICA": {
+        "prerequisitos": []
+    },
+    "ALGEBRA BASICA": {
+        "prerequisitos": ["ARITMETICA"]
+    },
+    "GEOMETRIA": {
+        "prerequisitos": ["ALGEBRA BASICA"]
+    },
+    "TRIGONOMETRIA": {
+        "prerequisitos": ["GEOMETRIA"]
+    },
+    "GEOMETRIA ANALITICA": {
+        "prerequisitos": ["TRIGONOMETRIA"]
+    },
+    "PRECALCULO": {
+        "prerequisitos": ["GEOMETRIA ANALITICA"]
+    },
+    "CALCULO DIFERENCIAL": {
+        "prerequisitos": ["PRECALCULO"]
+    },
+    "CALCULO INTEGRAL": {
+        "prerequisitos": ["CALCULO DIFERENCIAL"]
+    },
+    "VECTORES Y GEOMETRIA": {
+        "prerequisitos": ["PRECALCULO"]
+    },
+    "ALGEBRA LINEAL": {
+        "prerequisitos": ["VECTORES Y GEOMETRIA"]
+    },
+    "CALCULO VECTORIAL": {
+        "prerequisitos": ["CALCULO INTEGRAL", "VECTORES Y GEOMETRIA"]
+    },
+    "ECUACIONES DIFERENCIALES": {
+        "prerequisitos": ["CALCULO VECTORIAL", "ALGEBRA LINEAL"]
+    },
+    "FIS-01": {
+        "prerequisitos": ["TRIGONOMETRIA"]
+    },
+    "FIS-02": {
+        "prerequisitos": ["FIS-01"]
+    },
+    "FIS-03": {
+        "prerequisitos": ["FIS-02"]
+    },
+    "FIS-04": {
+        "prerequisitos": ["FIS-03"]
+    },
+    "FIS-05": {
+        "prerequisitos": ["FIS-04"]
+    },
+    "QUIM-01": {
+        "prerequisitos": ["ARITMETICA"]
+    },
+    "QUIM-02": {
+        "prerequisitos": ["QUIM-01"]
+    },
+    "QUIM-03": {
+        "prerequisitos": ["QUIM-02"]
+    },
+    "QUIM-04": {
+        "prerequisitos": ["QUIM-03"]
+    },
+    "QUIM-05": {
+        "prerequisitos": ["QUIM-04"]
+    },
+    "PROG-01": {
+        "prerequisitos": []
+    },
+    "PROG-02": {
+        "prerequisitos": ["PROG-01"]
+    },
+    "PROG-03": {
+        "prerequisitos": ["PROG-02"]
+    },
+    "PROG-04": {
+        "prerequisitos": ["PROG-03"]
+    },
+    "PROG-05": {
+        "prerequisitos": ["PROG-04"]
+    }
+}

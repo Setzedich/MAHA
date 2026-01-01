@@ -1,0 +1,17 @@
+{
+    "nombre": "Angel",
+    "carrera": "sistemas",
+    "progreso": {
+        "INTRO-DIAG": "dominado_por_diagnostico",
+        "PROG-01": "completado_por_reforzamiento",
+        "PROG-02": "completado_por_reforzamiento",
+        "PROG-03": "completado_por_reforzamiento"
+    },
+    "orden_materias": [
+        "FISICA",
+        "MATEMATICAS",
+        "PROGRAMACION",
+        "QUIMICA"
+    ],
+    "puntajes_diagnostico": {}
+}
