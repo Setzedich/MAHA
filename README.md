@@ -1,147 +1,353 @@
-MAHA – Modular Adaptive Helper for Academics
+<div align="center">
+
+# MAHA
+
+### Mathematics Adaptive Helper Assistant
+
+</div>
+
+---
+
+## About the Project
+
+**MAHA** is an educational desktop application developed in **Python**.  
+Its main objective is to help students reinforce academic topics through diagnostic questions, personalized learning paths, user profiles, visual content, prerequisite maps, and a neural network model that analyzes student performance.
+
+The system includes different subjects such as mathematics, physics, chemistry, and programming. Each subject contains topics, exercises, explanations, and reinforcement content designed to guide the student according to their progress.
+
+---
+
+## Main Features
+
+- Educational reinforcement system
+- User profile management
+- Diagnostic questionnaires
+- Personalized learning progress
+- Subject-based topic organization
+- Prerequisite system between topics
+- Visual learning resources using GIFs
+- Interactive graphical interface
+- Performance tracking
+- Neural network model for learning analysis
+- Dataset-based progress storage
+- Topic recommendation support
+- Graph-based visualization of subject relationships
+- Save and load system for student profiles
+
+---
+
+## Technologies Used
+
+- Python
+- PySide6
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- NetworkX
+- JSON
+- CSV
+
+---
+
+## Project Structure
+
+<pre>
+MAHA/
+│
+├── GIFS/
+│   ├── cada lado 3 cubo - geometria.gif
+│   ├── derivada.gif
+│   ├── dominio_rango.gif
+│   ├── grafica de cos (x) - trigonometria.gif
+│   ├── integral.gif
+│   ├── magnitud_vector.gif
+│   ├── pendiente.gif
+│   ├── producto_punto.gif
+│   ├── proporcion de sombras - geometria.gif
+│   ├── sdfasfaf.gif
+│   └── seno_circulo_unitario.gif
+│
+├── perfiles/
+│   ├── angel.json
+│   └── martin.json
+│
+├── CONTENIDO.py
+├── GRAFO_LOGICA.py
+├── INTERFAZ.py
+├── PERFILES.py
+├── PREREQUISITOS.json
+├── TEMA.py
+├── UTILIDADES.py
+├── dataset_maha.csv
+├── main.py
+├── modelo_nn.py
+├── nico.png
+└── README.md
+</pre>
 
-MAHA is an academic software project developed in Python whose goal is to support engineering students at academic risk through an adaptive system that analyzes performance, identifies weaknesses, and generates personalized learning paths based on each student’s needs.
+---
 
-The system integrates algorithmic logic, data structures, a basic neural network, and a graphical user interface, combining concepts from software engineering, data analysis, and educational systems design.
+## File Description
 
+| File | Description |
+|---|---|
+| `main.py` | Main execution file of the project. |
+| `INTERFAZ.py` | Contains the graphical user interface built with PySide6. |
+| `CONTENIDO.py` | Stores subjects, topics, questions, explanations, and reinforcement content. |
+| `TEMA.py` | Defines the topic structure and its behavior. |
+| `PERFILES.py` | Manages user profiles and saves progress in JSON files. |
+| `UTILIDADES.py` | Contains helper functions for text cleaning, validation, and answer processing. |
+| `GRAFO_LOGICA.py` | Creates graph structures to represent subjects, topics, and prerequisites. |
+| `modelo_nn.py` | Implements the neural network model used to analyze student performance. |
+| `PREREQUISITOS.json` | Stores prerequisite relationships between topics. |
+| `dataset_maha.csv` | Stores learning data used by the neural network model. |
+| `GIFS/` | Contains visual resources used to explain academic topics. |
+| `perfiles/` | Stores saved user profiles. |
 
-🎯 Project Objective
+---
 
-Detect academic difficulties by subject and topic
+## Subjects Included
 
-Evaluate student mastery through adaptive questioning
+The project includes learning paths for the following areas:
 
-Generate personalized learning paths based on results and prerequisites
+- Mathematics
+- Physics
+- Chemistry
+- Programming
 
-Track progress through persistent student profiles
+---
 
-Provide all functionality through a user-friendly graphical interface
+## Mathematics Topics
 
+Some of the mathematics topics included are:
 
-🧠 System Architecture
+- Arithmetic
+- Basic Algebra
+- Geometry
+- Trigonometry
+- Analytic Geometry
+- Precalculus
+- Differential Calculus
+- Integral Calculus
+- Linear Algebra
+- Vector Calculus
+- Differential Equations
+- Vectors and Geometry
 
-MAHA is structured into clearly separated modules to ensure maintainability and scalability:
+---
 
-├──main.py # Core system logic and execution flow
+## Physics Topics
 
-├── INTERFAZ.py # Graphical User Interface (GUI)
+The physics section includes topics such as:
 
-├── modelo_nn.py # Neural network for performance evaluation
+- Vectors and magnitudes
+- Kinematics
+- Newton's laws
+- Work and energy
+- Basic electricity
 
-├── GRAFO_LOGICA.py # Prerequisite and dependency logic (graph-based)
+---
 
-├── CONTENIDO.py # Academic content and question bank
+## Chemistry Topics
 
-├── PERFILES.py # Student profile management
+The chemistry section includes fundamental topics such as:
 
-├── UTILIDADES.py # Utility and helper functions
+- Atomic structure
+- Chemical bonds
+- Chemical reactions
+- Stoichiometry
+- Basic chemistry concepts
 
-├── TEMA.py # Academic topic model
+---
 
-├── PREREQUISITOS.json # External definition of topic prerequisites
+## Programming Topics
 
-└── .venv/ # Virtual environment (not required in repo)
+The programming section includes basic reinforcement topics related to programming logic and computational thinking.
 
+---
 
+## How the System Works
 
-⚙️ Execution Flow
+MAHA allows the student to create or load a profile.  
+After selecting a subject and topic, the system can evaluate the student through diagnostic questions.
 
-The user selects or creates a student profile
+Based on the result, the system determines whether the student already understands the topic or needs reinforcement. If reinforcement is needed, the application provides explanations, visual resources, and additional practice.
 
-MAHA evaluates the student through topic-specific questions
+The project also uses prerequisite logic, meaning some topics may depend on previous knowledge from other topics. This helps organize learning in a more structured way.
 
-Results are processed using:
+---
 
-Performance thresholds
+## Neural Network Model
 
-Topic prerequisite relationships
+The project includes a neural network model implemented in `modelo_nn.py`.
 
-A basic neural network model
+This model uses student performance data stored in:
 
-A personalized learning path is generated
+<pre>
+dataset_maha.csv
+</pre>
 
-Student progress is saved and can be resumed in future sessions
+The neural network can analyze information such as:
 
+- Topic ID
+- Student score
+- Global percentage
+- Number of attempts
 
-📁 Module Overview
-main.py
+This allows the system to support personalized learning decisions and future topic recommendations.
 
-Main entry point of the system.
-Coordinates profile management, evaluation logic, learning path generation, and integration between all modules.
+---
 
-INTERFAZ.py
+## User Profiles
 
-Implements the graphical user interface (GUI), allowing the system to be used without relying on the terminal.
-Displays profiles, evaluation results, and generated learning paths.
+User progress is saved in the `perfiles/` folder using JSON files.
 
-modelo_nn.py
+Example:
 
-Contains a basic neural network used to analyze student performance patterns and support decisions related to reinforcement or advancement.
+<pre>
+perfiles/angel.json
+perfiles/martin.json
+</pre>
 
-GRAFO_LOGICA.py
+Each profile stores information related to the student's progress, completed topics, and learning status.
 
-Implements graph-based logic to model topic dependencies and enforce prerequisite completion before allowing progression.
+---
 
-CONTENIDO.py
+## Visual Resources
 
-Acts as the central repository of academic content, including theoretical material, question banks, topic metadata, and suggested learning paths.
+The project includes GIF animations to help explain academic concepts visually.
 
-PERFILES.py
+Examples of included visual resources:
 
-Handles creation, loading, and persistent storage of student profiles and their performance history.
+- Derivatives
+- Integrals
+- Domain and range
+- Unit circle sine
+- Dot product
+- Vector magnitude
+- Slope
+- Geometry examples
+- Trigonometric graphs
 
-TEMA.py
+These resources make the learning process more interactive and easier to understand.
 
-Defines the Tema class, representing an academic topic, its content, mastery level, and current state within the learning path.
+---
 
-UTILIDADES.py
+## Requirements
 
-Provides helper functions for input normalization, text processing, and shared utilities used across the system.
+Before running the project, make sure you have Python installed.
 
+Recommended Python version:
 
-📊 Evaluation Criteria
+<pre>
+Python 3.10 or higher
+</pre>
 
-The system uses a default passing threshold of 0.8
+Required libraries:
 
-If the threshold is not met:
+<pre>
+PySide6
+pandas
+numpy
+scikit-learn
+matplotlib
+networkx
+</pre>
 
-The topic is reinforced
+---
 
-The learning path is adjusted
+## Installation
 
-Dependent topics are temporarily locked
+Clone the repository:
 
-Topic prerequisites are dynamically loaded from PREREQUISITOS.json
+<pre>
+git clone https://github.com/your-username/MAHA.git
+</pre>
 
+Enter the project folder:
 
-🚀 Technologies Used
+<pre>
+cd MAHA
+</pre>
 
-Python
+Install the required libraries:
 
-Modular programming
+<pre>
+pip install PySide6 pandas numpy scikit-learn matplotlib networkx
+</pre>
 
-Data structures
+---
 
-Graph-based logic
+## How to Run
 
-Basic neural networks
+Run the main file:
 
-Graphical user interfaces
+<pre>
+python main.py
+</pre>
 
-Persistent data storage
+If your system uses `python3`, run:
 
-Object-oriented design
+<pre>
+python3 main.py
+</pre>
 
+---
 
-📌 Academic Context
+## Important Notes
 
-MAHA was developed as a university-level academic project, integrating knowledge from programming, data structures, introductory artificial intelligence, software engineering, and systems design.
+- Do not delete the `GIFS/` folder because it contains visual resources used by the application.
+- Do not delete `PREREQUISITOS.json` because it stores topic dependency information.
+- Do not delete the `perfiles/` folder if you want to keep saved student progress.
+- Do not delete `dataset_maha.csv` because it stores learning data used by the neural network model.
+- Make sure all files remain in the same project structure to avoid path errors.
 
-The project serves both as a functional educational tool and a technical demonstration of applied engineering concepts.
+---
 
+## Educational Purpose
 
-✨ Author
+This project was developed as an academic software project to practice and demonstrate knowledge in:
 
-Marlon Molina
-Cybernetics Engineering in Computer Systems
-Universidad La Salle México
+- Python programming
+- Object-oriented programming
+- Graphical user interface development
+- Educational software design
+- File handling with JSON and CSV
+- Data processing
+- Neural network implementation
+- Graph logic
+- Student profile management
+- Adaptive learning systems
+- User experience design
+
+---
+
+## Future Improvements
+
+Possible future improvements for the project include:
+
+- Adding more subjects and topics
+- Improving the neural network recommendations
+- Adding more interactive exercises
+- Creating a progress dashboard
+- Adding more visual animations
+- Implementing a login system
+- Exporting student progress reports
+- Adding difficulty levels
+- Improving the interface design
+- Adding database support
+
+---
+
+## Author
+
+Developed by **Marlon Molina**.
+
+---
+
+## License
+
+This project was created for educational purposes.
+
+You may use it as a learning reference or modify it for academic and personal practice.
